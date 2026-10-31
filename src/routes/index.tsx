@@ -171,11 +171,14 @@ function App() {
           <div className="mb-2 text-sm font-medium text-muted-foreground">Preview live</div>
           <div className="origin-top-left shadow-2xl" style={{ width: 794 * 0.72, height: 1123 * 0.72 }}>
             <div style={{ transform: "scale(0.72)", transformOrigin: "top left" }}>
-              <InvoicePreview ref={ref} inv={inv} />
+              <InvoicePreview inv={inv} />
             </div>
           </div>
         </section>
       </main>
+      <div aria-hidden style={{ position: "fixed", left: -10000, top: 0 }}>
+        <InvoicePreview ref={ref} inv={inv} />
+      </div>
     </div>
   );
 }
