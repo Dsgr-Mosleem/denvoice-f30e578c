@@ -132,6 +132,24 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+:root {
+  --navy: oklch(0.2 0.1 268);
+  --electric: oklch(0.5 0.27 264);
+  --gradient-brand: linear-gradient(135deg, var(--navy), var(--electric));
+  --primary: oklch(0.42 0.24 264);
+  --background: oklch(0.97 0.01 265);
+  --ring: oklch(0.5 0.27 264);
+}
+@theme inline {
+  --color-navy: var(--navy);
+  --color-electric: var(--electric);
+  --font-display: "Bebas Neue", sans-serif;
+  --font-sans: "Sora", sans-serif;
+}
+@utility bg-brand {
+  background-image: var(--gradient-brand);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -140,5 +158,6 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
 }
