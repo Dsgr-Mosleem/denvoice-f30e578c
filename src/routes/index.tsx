@@ -119,7 +119,7 @@ function App() {
         {/* Form */}
         <section className="space-y-4 rounded-xl border bg-card p-5">
           <div className="flex items-center justify-between">
-            <h2 className="font-display text-3xl tracking-wide text-primary">{inv.number}</h2>
+            <h2 className="font-display whitespace-nowrap text-3xl tracking-wide text-primary">{inv.number}</h2>
             <select className={input + " w-auto"} value={inv.status} onChange={(e) => set("status", e.target.value as Invoice["status"])}>
               <option value="belum">Belum lunas</option><option value="lunas">Lunas</option>
             </select>
