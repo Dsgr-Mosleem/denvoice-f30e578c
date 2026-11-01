@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { nextNumber, lineTotal, waPhone } from "./invoice";
+import { nextNumber, lineTotal, waPhone, waMessage } from "./invoice";
 
 describe("invoice rules", () => {
   it("numbers sequentially", () => {
