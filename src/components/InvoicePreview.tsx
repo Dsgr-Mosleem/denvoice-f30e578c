@@ -24,7 +24,9 @@ export const InvoicePreview = forwardRef<HTMLDivElement, { inv: Invoice }>(({ in
             <div className="mt-1 text-sm opacity-90">{inv.number}</div>
           </div>
         </div>
-        <div className="mt-6 text-xs opacity-80">Graphic Design Service • {BRAND.phone} • {BRAND.address}</div>
+        <div className="mt-6 whitespace-pre-line text-xs opacity-80">Graphic Design Service 
+{BRAND.phone} 
+{BRAND.address}</div>
       </div>
 
       <div className="grid grid-cols-2 gap-8 px-12 py-8 text-sm">
