@@ -23,7 +23,7 @@ const today = () => new Date().toISOString().slice(0, 10);
 const newItem = (): Item => ({ id: uid(), name: "", qty: 1, price: 0, discount: 0 });
 const blank = (list: Invoice[]): Invoice => ({
   id: uid(), number: nextNumber(list), clientName: "", clientPhone: "", clientAddress: "",
-  date: today(), dueDate: "", items: [newItem()], notes: "Pembayaran via transfer bank. Revisi maks. 2x.", status: "belum",
+  date: today(), dueDate: "", items: [newItem()], notes: "Pembayaran ke BANK BSI 7349037054 atau DANA +62 851-5076-9286 a.n. ILYAS ARRIBATH. Revisi maks. 2x.", status: "belum",
 });
 
 const input = "w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring";

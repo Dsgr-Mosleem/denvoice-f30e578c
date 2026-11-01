@@ -24,9 +24,21 @@ export const InvoicePreview = forwardRef<HTMLDivElement, { inv: Invoice }>(({ in
             <div className="mt-1 text-sm opacity-90">{inv.number}</div>
           </div>
         </div>
-        <div className="mt-6 whitespace-pre-line text-xs opacity-80">Graphic Design Service 
-{BRAND.phone} 
+        <div className="mt-6 flex items-start justify-between gap-6">
+          <div className="whitespace-pre-line text-xs opacity-80">Graphic Design Service
+{BRAND.phone}
 {BRAND.address}</div>
+          <div className="shrink-0 rounded-lg border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-3 text-xs">
+            <div className="mb-1 font-semibold uppercase tracking-[0.2em] opacity-90">Pembayaran</div>
+            {BRAND.accounts.map((a) => (
+              <div key={a.label} className="flex items-baseline justify-between gap-5">
+                <span className="opacity-80">{a.label}</span>
+                <span className="font-semibold tabular-nums tracking-wide">{a.value}</span>
+              </div>
+            ))}
+            <div className="mt-1 text-right opacity-80">a.n. {BRAND.accountName}</div>
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-8 px-12 py-8 text-sm">

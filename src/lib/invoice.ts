@@ -16,6 +16,11 @@ export const BRAND = {
   name: "DESIGNER_MOSLEEM",
   phone: "+62 899-3966-234",
   address: "Imogiri, Bantul, Yogyakarta, IDN",
+  accountName: "ILYAS ARRIBATH",
+  accounts: [
+    { label: "BANK BSI", value: "7349037054" },
+    { label: "DANA", value: "+62 851-5076-9286" },
+  ],
 };
 
 export const lineTotal = (i: Item) => i.qty * i.price * (1 - Math.min(Math.max(i.discount, 0), 100) / 100);
@@ -49,6 +54,10 @@ export function waMessage(inv: Invoice) {
     ``,
     `*Total: ${rupiah(total(inv))}*`,
     `Status: ${inv.status === "lunas" ? "LUNAS ✅" : "Belum lunas"}`,
+    ``,
+    `Pembayaran:`,
+    ...BRAND.accounts.map((a) => `${a.label}: ${a.value}`),
+    `a.n. ${BRAND.accountName}`,
     ``,
     `Terima kasih 🙏`,
     `${BRAND.name} • ${BRAND.phone}`,
